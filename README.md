@@ -2,7 +2,7 @@
 
 A modern React dashboard for managing user details built with Next.js and Tailwind CSS. This application provides an interface to view, sort, filter, and manage user records with various status indicators and statistics.
 
-![Dashboard Preview](https://github.com/Lathiya50/userDetail-dashboard/raw/main/preview.png)
+![Dashboard Preview](https://github.com/user-attachments/assets/2f25c24e-755b-4abb-a6e7-2d456f734ff7)
 
 ## Features
 
