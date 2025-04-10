@@ -1,36 +1,123 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# User Detail Dashboard
 
-## Getting Started
+A modern React dashboard for managing user details built with Next.js and Tailwind CSS. This application provides an interface to view, sort, filter, and manage user records with various status indicators and statistics.
 
-First, run the development server:
+![Dashboard Preview](https://github.com/Lathiya50/userDetail-dashboard/raw/main/preview.png)
 
+## Features
+
+- 📊 Dashboard with user statistics
+- 🔍 Advanced filtering and search
+- 📅 Date range selection
+- 🔄 Status updates for users (Active, Invited, Blocked)
+- ⚡ Responsive design for all device sizes
+- 📱 Mobile-friendly interface
+- 🎯 Optimized performance with React hooks
+- 🧩 Component-based architecture
+- 📈 Pagination for large datasets
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Lathiya50/userDetail-dashboard.git
+cd userDetail-dashboard
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+mitigata/
+├── src/
+│   ├── app/
+│   │   ├── globals.css         # Global CSS styles
+│   │   ├── layout.js           # Root layout
+│   │   └── page.js             # Main page component
+│   ├── components/
+│   │   ├── dashboard/          # Dashboard specific components
+│   │   │   ├── DateRangePicker.jsx
+│   │   │   ├── FilterSection.jsx
+│   │   │   ├── Pagination.jsx
+│   │   │   ├── SearchInput.jsx
+│   │   │   ├── StatCard.jsx
+│   │   │   ├── StatsSection.jsx
+│   │   │   ├── StatusFilter.jsx
+│   │   │   ├── TableHeader.jsx
+│   │   │   ├── UserDashboard.jsx
+│   │   │   ├── UsersTable.jsx
+│   │   │   └── UserRow.jsx
+│   │   └── ui/                 # Reusable UI components
+│   │       ├── button.jsx
+│   │       ├── calendar.jsx
+│   │       ├── card.jsx
+│   │       ├── input.jsx
+│   │       ├── popover.jsx
+│   │       ├── select.jsx
+│   │       └── skeleton.jsx
+│   ├── constants/              # Application constants
+│   │   └── index.js
+│   ├── hooks/                  # Custom React hooks
+│   │   ├── usePagination.js
+│   │   └── useUserData.js
+│   └── lib/                    # Utility functions
+│       └── utils.js
+└── package.json
+```
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+### Core
+- **Next.js 15.2.5** - React framework
+- **React 19.0.0** - JavaScript library for building user interfaces
+- **Tailwind CSS 4** - Utility-first CSS framework
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### UI Components
+- **Radix UI** - Unstyled, accessible components
+  - `@radix-ui/react-popover`
+  - `@radix-ui/react-select`
+  - `@radix-ui/react-slot`
+- **Lucide React** - Icon library
+- **React Day Picker** - Calendar component
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Utilities
+- **class-variance-authority** - For component variants
+- **clsx** & **tailwind-merge** - For conditional class names
+- **date-fns** - Date manipulation
+- **react-intersection-observer** - Intersection observer hook
 
-## Deploy on Vercel
+## Key Features Implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Data Management
+The application uses custom hooks for data management:
+- `useUserData` - Handles user records, filtering, and status updates
+- `usePagination` - Handles pagination and infinite scrolling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Responsive Design
+The UI is fully responsive using Tailwind's responsive modifiers:
+- Mobile-first approach
+- Adaptive layouts for different screen sizes
+
+### Performance Optimizations
+- Memoization with `useMemo` and `memo`
+- Debounced filters
+- Lazy loading with infinite scroll
