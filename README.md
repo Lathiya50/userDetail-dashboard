@@ -4,6 +4,10 @@ A modern React dashboard for managing user details built with Next.js and Tailwi
 
 ![Dashboard Preview](https://github.com/user-attachments/assets/2f25c24e-755b-4abb-a6e7-2d456f734ff7)
 
+## Live Demo
+
+Check out the live demo: [User Detail Dashboard](https://user-detail-dashboard.vercel.app/)
+
 ## Features
 
 - 📊 Dashboard with user statistics
